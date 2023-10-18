@@ -6,5 +6,81 @@
         "disabled": false,
         "info": "",
         "env": []
+    },
+    {
+        "id": "6cdf5b8cf244ab69",
+        "type": "shutdown",
+        "z": "25dd3b2520eebd82",
+        "name": "",
+        "x": 540,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "a178cb89e91b96dc",
+        "type": "inject",
+        "z": "25dd3b2520eebd82",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 120,
+        "wires": [
+            [
+                "6cdf5b8cf244ab69"
+            ]
+        ]
+    },
+    {
+        "id": "f837852b9a064f47",
+        "type": "inject",
+        "z": "25dd3b2520eebd82",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 180,
+        "wires": [
+            [
+                "f7a25651eff9cd42"
+            ]
+        ]
+    },
+    {
+        "id": "f7a25651eff9cd42",
+        "type": "restart",
+        "z": "25dd3b2520eebd82",
+        "name": "",
+        "x": 530,
+        "y": 180,
+        "wires": []
     }
 ]
