@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "id": "25dd3b2520eebd82",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    }
+]
