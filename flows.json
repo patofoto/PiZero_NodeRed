@@ -8,6 +8,121 @@
         "env": []
     },
     {
+        "id": "1f815c8fbd6730f3",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "14caf0770ae2d15d",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "bc62117584257f2c",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "1f815c8fbd6730f3",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "6cdf5b8cf244ab69",
         "type": "shutdown",
         "z": "25dd3b2520eebd82",
@@ -82,5 +197,200 @@
         "x": 530,
         "y": 180,
         "wires": []
+    },
+    {
+        "id": "af625621450d92ab",
+        "type": "pca9685-srv",
+        "z": "25dd3b2520eebd82",
+        "name": "",
+        "devadr": "0",
+        "channel": "15",
+        "pos": "0",
+        "tlow": "550",
+        "thigh": "2600",
+        "digital": false,
+        "x": 620,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "1217eae0b514f4b3",
+        "type": "i2c scan",
+        "z": "25dd3b2520eebd82",
+        "name": "",
+        "busno": "1",
+        "x": 540,
+        "y": 400,
+        "wires": [
+            [
+                "f14e1c66a212edd2"
+            ],
+            [
+                "e0ca0de4b7ea2a23"
+            ]
+        ]
+    },
+    {
+        "id": "f14e1c66a212edd2",
+        "type": "debug",
+        "z": "25dd3b2520eebd82",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "e0ca0de4b7ea2a23",
+        "type": "debug",
+        "z": "25dd3b2520eebd82",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "33d6c51d692ac4db",
+        "type": "inject",
+        "z": "25dd3b2520eebd82",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 380,
+        "y": 400,
+        "wires": [
+            [
+                "1217eae0b514f4b3"
+            ]
+        ]
+    },
+    {
+        "id": "b9a3f8f292b9624b",
+        "type": "inject",
+        "z": "25dd3b2520eebd82",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "50",
+        "payloadType": "num",
+        "x": 230,
+        "y": 520,
+        "wires": [
+            [
+                "af625621450d92ab"
+            ]
+        ]
+    },
+    {
+        "id": "ba5341198bb20ea3",
+        "type": "inject",
+        "z": "25dd3b2520eebd82",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 230,
+        "y": 480,
+        "wires": [
+            [
+                "af625621450d92ab"
+            ]
+        ]
+    },
+    {
+        "id": "0bfb3a86c4cdd6c4",
+        "type": "inject",
+        "z": "25dd3b2520eebd82",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "100",
+        "payloadType": "num",
+        "x": 230,
+        "y": 560,
+        "wires": [
+            [
+                "af625621450d92ab"
+            ]
+        ]
+    },
+    {
+        "id": "473f80db7fb5cab2",
+        "type": "ui_slider",
+        "z": "25dd3b2520eebd82",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "bc62117584257f2c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 350,
+        "y": 680,
+        "wires": [
+            [
+                "af625621450d92ab"
+            ]
+        ]
     }
 ]
