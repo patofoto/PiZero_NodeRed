@@ -2,7 +2,17 @@
     "name": "PiZero_NodeRed",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "@js-on/node-red-contrib-py3run": "1.0.0",
+        "node-red-contrib-i2c": "0.9.0",
+        "node-red-contrib-iiot-rpi-pca9685": "1.0.21",
+        "node-red-contrib-python3-function": "0.0.4",
+        "node-red-contrib-rpi-shutdown": "0.0.2",
+        "node-red-contrib-string": "1.0.0",
+        "node-red-contrib-ui-led": "0.4.11",
+        "node-red-dashboard": "3.6.2",
+        "node-red-node-pi-neopixel": "2.0.0"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
