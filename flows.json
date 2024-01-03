@@ -149,7 +149,7 @@
     {
         "id": "1f815c8fbd6730f3",
         "type": "ui_tab",
-        "name": "Home",
+        "name": "Woe Machine 1",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
@@ -541,6 +541,77 @@
         "x": 920,
         "y": 300,
         "wires": []
+    },
+    {
+        "id": "840a39d2fb50f470",
+        "type": "py3run",
+        "z": "908cf45c09d26199",
+        "name": "",
+        "path": "",
+        "args": {},
+        "x": 590,
+        "y": 260,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "cbc9be8f7f93309a",
+        "type": "python3-function",
+        "z": "908cf45c09d26199",
+        "name": "",
+        "func": "\nreturn msg",
+        "outputs": 1,
+        "x": 590,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6fc7a0d1cdec2548",
+        "type": "rpi-neopixels",
+        "z": "e44e0fcf2539cd72",
+        "name": "",
+        "gpio": "18",
+        "pixels": "10",
+        "bgnd": "",
+        "fgnd": "",
+        "wipe": "40",
+        "mode": "pixels",
+        "rgb": "grb",
+        "brightness": "100",
+        "gamma": true,
+        "x": 870,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "2281649954dfe7eb",
+        "type": "inject",
+        "z": "e44e0fcf2539cd72",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Blue",
+        "payloadType": "str",
+        "x": 490,
+        "y": 360,
+        "wires": [
+            [
+                "6fc7a0d1cdec2548"
+            ]
+        ]
     },
     {
         "id": "69991856532b313b",
